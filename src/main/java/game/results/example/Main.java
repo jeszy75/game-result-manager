@@ -5,7 +5,6 @@ import game.results.GameResult;
 import game.results.GameResultManager;
 import game.results.JsonGameResultManager;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.Duration;
