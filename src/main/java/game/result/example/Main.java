@@ -1,9 +1,9 @@
-package game.results.example;
+package game.result.example;
 
 import com.github.javafaker.Faker;
-import game.results.GameResult;
-import game.results.GameResultManager;
-import game.results.JsonGameResultManager;
+import game.result.GameResult;
+import game.result.GameResultManager;
+import game.result.JsonGameResultManager;
 
 import java.io.IOException;
 import java.nio.file.Path;

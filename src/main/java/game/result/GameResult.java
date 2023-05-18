@@ -1,4 +1,4 @@
-package game.results;
+package game.result;
 
 import lombok.*;
 
