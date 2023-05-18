@@ -13,15 +13,15 @@ import java.util.Locale;
 
 public class Main {
 
-    private static final Faker faker = new Faker(Locale.ENGLISH);
+    private static final Faker FAKER = new Faker(Locale.ENGLISH);
 
     private static GameResult createGameResult() {
         return GameResult.builder()
-                .playerName(faker.name().firstName())
-                .solved(faker.bool().bool())
-                .steps(faker.number().numberBetween(10, 50))
-                .duration(Duration.ofSeconds(faker.number().numberBetween(10, 100)))
-                .created(ZonedDateTime.now().minusMinutes(faker.number().numberBetween(0, 60)))
+                .playerName(FAKER.name().firstName())
+                .solved(FAKER.bool().bool())
+                .steps(FAKER.number().numberBetween(10, 50))
+                .duration(Duration.ofSeconds(FAKER.number().numberBetween(10, 100)))
+                .created(ZonedDateTime.now().minusMinutes(FAKER.number().numberBetween(0, 60)))
                 .build();
     }
 
