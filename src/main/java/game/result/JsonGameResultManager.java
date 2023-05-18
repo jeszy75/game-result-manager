@@ -1,4 +1,3 @@
-
 package game.result;
 
 import lombok.NonNull;
