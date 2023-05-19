@@ -19,7 +19,7 @@ public class JsonGameResultManager implements GameResultManager {
 
     @Override
     public List<GameResult> add(@NonNull GameResult result) throws IOException {
-        var results = Files.exists(filePath) ? getAll() : new ArrayList<GameResult>();
+        var results = getAll();
         results.add(result);
         try (var out = Files.newOutputStream(filePath)) {
             JacksonHelper.writeList(out, results);
@@ -28,6 +28,9 @@ public class JsonGameResultManager implements GameResultManager {
     }
 
     public List<GameResult> getAll() throws IOException {
+        if (!Files.exists(filePath)) {
+            return new ArrayList<GameResult>();
+        }
         try (var in = Files.newInputStream(filePath)) {
             return JacksonHelper.readList(in, GameResult.class);
         }
